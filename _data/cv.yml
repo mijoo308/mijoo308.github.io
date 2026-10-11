@@ -2,96 +2,162 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Mijoo Kim
+    - name: Position
+      value: Applied AI Research Scientist @ VUNO Inc.
+    - name: Email
+      value: mijoo308@gmail.com
     - name: Languages
-      value: English, German
+      value: Korean, English
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Trustworthy Computer Vision
+      items:
+        - Model calibration, reliability, and robustness under distribution shifts.
+    - title: Vision-Language Models
+      items:
+        - Fine-tuning and calibration of VLMs for robust multi-modal understanding.
+    - title: Medical AI and Clinical Research
+      items:
+        - 3D brain MRI and chest X-ray analysis, including image registration, lesion and anatomical region segmentation, and LLM-based clinical report generation.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: M.S. in Artificial Intelligence
+      institution: Chung-Ang University, Seoul, Korea
+      year: 2022.09 - 2024.08
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - "Thesis: Uncertainty Calibration with Energy Based Instance-wise Scaling in the Wild Dataset"
+        - "Advisor: Prof. Junseok Kwon"
+        - "Cumulative GPA: 4.36 / 4.5"
+    - title: B.S. in Computer Science and Engineering
+      institution: Jeonbuk National University, Jeonju, Korea
+      year: 2018.03 - 2022.08
+      description:
+        - "Advisor: Prof. Hyungki Kim"
+        - "Cumulative GPA: 4.1 / 4.5"
+
+- title: Work Experience
+  type: time_table
+  contents:
+    - title: Applied AI Research Scientist
+      institution: VUNO Inc., Seoul, Korea
+      year: 2025.01 - Present
+      description:
+        - title: "AI Research — Brain MRI (VUNO Med®-DeepBrain®)"
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+            - Developed a small vessel disease localization model with cross-modality MRI registration, and integrated it into VUNO Med®-DeepBrain® as a new product feature.
+            - Conducted research on MRI-based automated diagnosis systems, collaborating with Asan Medical Center for clinical validation.
+            - Researched longitudinal MRI segmentation with explicit modeling of inter-scan registration and temporal changes.
+            - Investigated clinical report generation using LLMs (e.g., gpt-oss, MedGemma) conditioned on medical imaging outputs.
+        - title: "AI Research & Engineering — Chest X-ray (VUNO Med®-Chest X-ray™)"
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Developing models that leverage vision-language models (VLMs) for chest X-ray analysis.
+            - Building Airflow-based data pipelines for consolidating large-scale multi-institutional chest X-ray datasets under a unified schema, with a FastAPI-based inspection web UI.
+            - Developing MLOps infrastructure — experiment tracking, distributed hyperparameter search, and a SLURM-based multi-node GPU cluster with validated multi-node distributed (DDP) training.
+        - title: "Engineering"
+          contents:
+            - Reduced the production Docker image size by 57% through build-step optimization and Docker layer history analysis, significantly improving build time.
+            - Unified previously separate research and production repositories into a single monorepo for streamlined management.
+            - Built a CI pipeline to automatically test asynchronous task execution using Celery with a Redis broker in a containerized environment.
+    - title: Computer Vision Research Engineer Intern
+      institution: NextLab, Seoul, Korea
+      year: 2021.09 - 2021.12
       description:
-        - Description 1.
-        - Description 2.
+        - "Automated a highway drone control pipeline: lane region recognition, vehicle type classification, and optical flow/tracking integration; demonstrated on a live highway in Cheonan and filed a related patent."
+        - Implemented an end-to-end OCR pipeline surpassing the EasyOCR baseline in Korean text recognition performance.
+        - Built a subtitle anomaly detection system for streaming videos with dataset creation, recognition modules, and a multithreading pipeline.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Research Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Visiting Scholar
+      institution: Carnegie Mellon University, Pittsburgh, U.S.
+      year: 2023.08 - 2024.02
+      description:
+        - Selected for the IITP CMU AI Intensive Program Fellowship (30 researchers nationwide).
+        - Co-authored research on calibrated robust fine-tuning of VLMs (NeurIPS 2024).
+        - Developed a Jetbot SLAM robotics project using ROS for real-time navigation and control.
+        - Conducted research on attentive attribution maps to improve explainability in diffusion models.
+    - title: Graduate Researcher
+      institution: CVML Lab, Chung-Ang University, Seoul, Korea
+      year: 2022.09 - 2024.08
+      description:
+        - Published at ECCV 2024 (first author); presented works on membership inference in diffusion models and a calibration survey.
+        - Filed a KR patent on instance-specific energy-based calibration (2024).
+    - title: Undergraduate Researcher
+      institution: Visual Computing Lab, Jeonbuk National University, Jeonju, Korea
+      year: 2019.04 - 2021.08
+      description:
+        - Developed an industrial P&ID symbol/text recognition system (OCR, detection, GUI); co-authored two journal papers (ESWA 2021, KJCDE 2021).
+        - Contributed features and fixes to EasyOCR (28k+ stars) — rotated text option and post-processing bug fix, both merged.
 
-- title: Honors and Awards
+- title: Patents
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Uncertainty calibration system and method with energy-based instance-specific scaling
+      institution: Mijoo Kim and Junseok Kwon — Korean Patent 10-2024-0062366
+      year: 2024.05
+    - title: AI-based road control system and method using drones
+      institution: Chang Geun Lee, Jeong Gi Park, Mijoo Kim, et al. — Korean Patent 10-2022-0143599
+      year: 2022.11
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Open Source
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Contributor to <a href="https://github.com/JaidedAI/EasyOCR">EasyOCR</a> (28k+ stars) — implemented the rotated-text recognition option and fixed post-processing bugs; both merged and still in use as public API options.
+
+- title: Honors & Awards
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - ECCV DEI Travel Grant & Registration Support ($1,650)
+        - IITP Research Paper Support Grant ($750)
+    - year: 2023 - 2024
+      items:
+        - IITP CMU AI Intensive Program Fellowship ($41,250)
+    - year: 2022 - 2024
+      items:
+        - CAU Graduate School of AI Fellowship ($21,000)
+    - year: 2022
+      items:
+        - Top Prize, Korean Society for Computational Design and Engineering
+    - year: 2021
+      items:
+        - IITP ICT Internship Fellowship ($5,400)
+        - Excellence Prize, KSCDE Summer Conference
+    - year: 2020
+      items:
+        - JBNU Adventure Capability Scholarship ($750)
+        - Excellence Prize, Department of Computer Science Idea Hackathon
+    - year: 2018
+      items:
+        - Bronze Prize, Department of Computer Science Project Competition
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: ML / Research
+      items:
+        - Python, PyTorch, uncertainty calibration, segmentation/localization, VLM fine-tuning, medical imaging (3D MRI, CXR)
+    - title: Engineering / MLOps
+      items:
+        - Git, Docker, Airflow, SLURM, FastAPI, Celery/Redis, MongoDB, CI pipelines, experiment tracking (W&B, ClearML), ROS
+
+- title: Extracurricular Activity
+  type: time_table
+  contents:
+    - title: Member, Carnegie AI Safety Initiative (CASI)
+      institution: Carnegie Mellon University, Pittsburgh, U.S.
+      year: 2023.09 - 2023.11
+      description:
+        - Participated in reading groups and discussions on AI safety research articles.
+    - title: Head of Public Relations, Student Council
+      institution: Department of Computer Science and Engineering, JBNU
+      year: 2020.09 - 2020.12
+      description:
+        - Led the Public Relations division, organizing and promoting departmental events.

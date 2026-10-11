@@ -1,0 +1,19 @@
+<div class="publications patents">
+  <ol class="bibliography">
+    {% for patent in site.data.patents %}
+      <li>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title">
+              {{ patent.title }}
+              <span class="pub-tag">Patent</span>
+              {% if patent.affiliation %}<span class="pub-tag pub-tag-affil">@{{ patent.affiliation }}</span>{% endif %}
+            </div>
+            <div class="author">{{ patent.inventors }}</div>
+            <div class="periodical">{{ patent.number }} &middot; {{ patent.date }}</div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

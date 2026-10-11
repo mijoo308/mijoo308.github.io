@@ -1,0 +1,26 @@
+<div class="publications under-review">
+  <ol class="bibliography">
+    {% for paper in site.data.under_review %}
+      <li>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title">
+              {{ paper.title }}
+              {% if paper.authorship == "first" %}
+                <span class="pub-tag pub-tag-first">1st author</span>
+              {% elsif paper.authorship == "second" %}
+                <span class="pub-tag pub-tag-second">2nd author</span>
+              {% else %}
+                <span class="pub-tag pub-tag-co">co-author</span>
+              {% endif %}
+              <span class="pub-tag">Under review</span>
+              {% if paper.affiliation %}<span class="pub-tag pub-tag-affil">@{{ paper.affiliation }}</span>{% endif %}
+            </div>
+            {% if paper.authors %}<div class="author">{{ paper.authors }}</div>{% endif %}
+            {% if paper.venue %}<div class="periodical">{{ paper.venue }}</div>{% endif %}
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
-nav: true
+nav: false # 블로그 글을 쓰기 시작하면 true로 바꾸세요
 nav_order: 1
 pagination:
   enabled: true

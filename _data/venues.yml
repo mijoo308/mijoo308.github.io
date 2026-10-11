@@ -7,3 +7,12 @@
 
 "Vision":
   color: "#009f36"
+
+"ECCV":
+  url: https://eccv.ecva.net/
+
+"NeurIPS":
+  url: https://neurips.cc/
+
+"ESWA":
+  url: https://www.sciencedirect.com/journal/expert-systems-with-applications

@@ -1,0 +1,16 @@
+<div class="news experience">
+  <div class="table-responsive">
+    <table class="table table-sm table-borderless">
+      {% for item in include.items %}
+        <tr>
+          <th scope="row" style="width: 22%">{{ item.period }}</th>
+          <td>
+            <b>{{ item.role }}</b> @
+            {% if item.url %}<a href="{{ item.url }}">{{ item.institution }}</a>{% else %}{{ item.institution }}{% endif %}
+            {% if item.note %}— {{ item.note }}{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>

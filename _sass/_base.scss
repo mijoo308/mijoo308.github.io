@@ -764,6 +764,43 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+
+        .pub-tag {
+          display: inline-block;
+          font-size: 0.66rem;
+          font-weight: 600;
+          line-height: 1;
+          padding: 0.2rem 0.35rem;
+          margin-left: 0.25rem;
+          border-radius: 0.25rem;
+          border: 1px solid var(--global-divider-color);
+          color: var(--global-text-color-light);
+          vertical-align: 0.15rem;
+          white-space: nowrap;
+        }
+
+        .pub-tag-affil {
+          color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+        }
+
+        .pub-tag-first {
+          color: #fff;
+          background-color: #c9a227; // gold
+          border-color: #c9a227;
+        }
+
+        .pub-tag-second {
+          color: #fff;
+          background-color: #8e9aa5; // silver
+          border-color: #8e9aa5;
+        }
+
+        .pub-tag-co {
+          color: #fff;
+          background-color: #b9722d; // bronze
+          border-color: #b9722d;
+        }
       }
 
       .author {
@@ -1422,4 +1459,21 @@ figure.cover {
   a.cover-link:hover {
     color: #23212d !important;
   }
+}
+
+// News (about page + news page): tighter rows, clearer gap before the next section
+.news {
+  margin-bottom: 3rem;
+
+  table th,
+  table td {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+  }
+
+}
+
+// Extra breathing room after the under-review list, before the patents heading
+.publications.under-review {
+  margin-bottom: 3rem;
 }

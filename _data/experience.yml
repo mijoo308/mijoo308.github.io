@@ -1,0 +1,32 @@
+# Compact experience lists for the about page. Full details live in _data/cv.yml (/cv/ page).
+work:
+  - period: 2025.01 – Present
+    role: Applied AI Research Scientist
+    institution: VUNO Inc.
+    url: https://www.vuno.co/
+    note: medical AI for brain MRI & chest X-ray — research, VLMs, product features, data pipelines, MLOps
+
+  - period: 2021.09 – 2021.12
+    role: Computer Vision Research Engineer Intern
+    institution: NextLab
+    url: https://www.nextlab.ai/
+    note: highway drone control automation, OCR, subtitle anomaly detection
+
+research:
+  - period: 2023.08 – 2024.02
+    role: Visiting Scholar
+    institution: Carnegie Mellon University
+    url: https://www.cmu.edu/
+    note: research on robust fine-tuning of vision-language models and explainability in diffusion models
+
+  - period: 2022.09 – 2024.08
+    role: Graduate Researcher
+    institution: CVML Lab, Chung-Ang University
+    url: https://sites.google.com/view/cau-cvml/
+    note: uncertainty calibration & distribution shift robustness
+
+  - period: 2019.04 – 2021.08
+    role: Undergraduate Researcher
+    institution: Visual Computing Lab, Jeonbuk National University
+    url: https://sites.google.com/view/vclab-cnu/home
+    note: industrial piping and instrumentation diagram recognition, EasyOCR open-source contributions

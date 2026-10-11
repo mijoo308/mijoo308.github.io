@@ -2,7 +2,7 @@
 ---
 <div class="row">
   {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
+    <div class="col col-sm-4 abbr">
       {%- if entry.abbr -%}
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
@@ -48,7 +48,34 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    {%- comment -%} Small tags next to the title: Conference / Journal / Workshop (override with pub_type in the bib entry) and affiliation at the time of publication {%- endcomment -%}
+    {% assign pub_type = entry.pub_type %}
+    {% if pub_type == blank %}
+      {% if entry.type == "article" %}
+        {% assign pub_type = "Journal" %}
+      {% elsif entry.type == "inproceedings" %}
+        {% assign pub_type = "Conference" %}
+      {% endif %}
+    {% endif %}
+    {%- comment -%} Authorship tag: position of Mijoo Kim in the author list {%- endcomment -%}
+    {% assign author_position = 0 %}
+    {% for author in entry.author_array %}
+      {% if author.last contains "Kim" and author.first contains "Mijoo" %}
+        {% assign author_position = forloop.index %}
+      {% endif %}
+    {% endfor %}
+    <div class="title">
+      {{ entry.title }}
+      {% if author_position == 1 %}
+        <span class="pub-tag pub-tag-first">1st author</span>
+      {% elsif author_position == 2 %}
+        <span class="pub-tag pub-tag-second">2nd author</span>
+      {% elsif author_position > 2 %}
+        <span class="pub-tag pub-tag-co">co-author</span>
+      {% endif %}
+      {% if pub_type %}<span class="pub-tag">{{ pub_type }}</span>{% endif %}
+      {% if entry.affiliation %}<span class="pub-tag pub-tag-affil">@{{ entry.affiliation }}</span>{% endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
